@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Height of the fixed header; pages pad their first section by this much. */
+    --header-h: 5.25rem;
+    color-scheme: light;
+  }
+  @media (min-width: 1024px) {
+    :root {
+      --header-h: 7rem;
+    }
+  }
+
+  html {
+    -webkit-text-size-adjust: 100%;
+    scroll-padding-top: calc(var(--header-h) + 1rem);
+  }
+
+  body {
+    @apply bg-white font-sans text-ink antialiased;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background: rgba(114, 188, 91, 0.3);
+  }
+
+  :focus-visible {
+    outline: 2px solid #3f7f2e;
+    outline-offset: 3px;
+    border-radius: 6px;
+  }
+}
+
+@layer components {
+  /* The original hero gradient: soft white to cyan to leaf green. */
+  .bg-hero {
+    background: radial-gradient(circle at 0% 0%, rgba(254, 255, 255, 0.445), #d8fdfc, rgba(114, 188, 91, 0.815));
+  }
+
+  .eyebrow {
+    @apply text-[13px] font-semibold uppercase tracking-[0.16em] text-leaf-deep;
+  }
+
+  .card {
+    @apply rounded-[28px] bg-white shadow-card ring-1 ring-black/[0.05];
+  }
+
+  .field {
+    @apply w-full rounded-xl border border-transparent bg-mist px-4 py-3 text-[16px] text-ink placeholder:text-ink-tertiary transition duration-200 ease-apple focus:border-leaf/60 focus:bg-white focus:outline-none focus:ring-4 focus:ring-leaf/15;
+  }
+}
+
+@layer utilities {
+  .no-scrollbar {
+    scrollbar-width: none;
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .text-balance {
+    text-wrap: balance;
+  }
+  .text-pretty {
+    text-wrap: pretty;
+  }
+}
