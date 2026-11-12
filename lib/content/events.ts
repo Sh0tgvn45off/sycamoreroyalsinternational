@@ -104,10 +104,11 @@ export const plans = [
   },
 ];
 
+/** Camp photos for the bento grid, in display order (one large, two tall, two wide). */
 export const moments = [
-  { src: "/images/moments/smile.jpg", alt: "A young girl smiles shyly at the camera", width: 1600, height: 1200 },
+  { src: "/images/moments/music.jpg", alt: "A keyboard player leads music for children seated under a tent", width: 1600, height: 1200 },
   { src: "/images/moments/cup.jpg", alt: "A small boy sits on the ground holding a blue cup", width: 1200, height: 1600 },
-  { src: "/images/moments/crowd.jpg", alt: "A crowd of children in an open field, many in blue shirts", width: 1600, height: 720 },
   { src: "/images/moments/joy.jpg", alt: "A boy in a turquoise shirt laughs at the camera", width: 1200, height: 1600 },
-  { src: "/images/moments/music.jpg", alt: "A keyboard player leads music for seated children", width: 1600, height: 1200 },
+  { src: "/images/moments/smile.jpg", alt: "A young girl smiles shyly at the camera", width: 1600, height: 1200 },
+  { src: "/images/moments/celebration.jpg", alt: "Children and women dance and sing under white tents", width: 1600, height: 720 },
 ];
